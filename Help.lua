@@ -158,6 +158,7 @@ local Translations = {
         LoopKill = "Зацикленный килл",
         SecTargetState = "Persistent target actions",
 
+        SecTargetTools = "Инструменты цели",
         SecSelf = "Собственные функции",
         GodMode = "God Mode",
         Noclip = "Noclip",
@@ -173,6 +174,7 @@ local Translations = {
         SecVisual = "Визуализация",
         FullBright = "FullBright",
         NoFog = "No Fog",
+        WhiteFX = "White FX",
         FOV = "Поле зрения",
 
         SecInterface = "Интерфейс",
@@ -232,6 +234,7 @@ local Translations = {
         LoopKill = "Loop Kill",
         SecTargetState = "Persistent target actions",
 
+        SecTargetTools = "Target tools",
         SecSelf = "Self Utility",
         GodMode = "God Mode",
         Noclip = "Noclip",
@@ -247,6 +250,7 @@ local Translations = {
         SecVisual = "Visuals",
         FullBright = "FullBright",
         NoFog = "No Fog",
+        WhiteFX = "White FX",
         FOV = "Field of view",
 
         SecInterface = "Interface",
@@ -795,7 +799,7 @@ local IslandFrame = Instance.new("Frame")
 IslandFrame.Name = "IslandFrame"
 IslandFrame.AnchorPoint = Vector2.new(0.5,0)
 IslandFrame.Position = UDim2.fromScale(0.5,0.018)
-IslandFrame.Size = UDim2.fromOffset(154,40)
+IslandFrame.Size = UDim2.fromOffset(142,38)
 IslandFrame.BackgroundColor3 = Color3.fromRGB(11,11,17)
 IslandFrame.BorderSizePixel = 0
 IslandFrame.Visible = false
@@ -815,7 +819,7 @@ RegisterForRecolor(islandStroke,"Color")
 
 local IslandLogo = Instance.new("ImageLabel")
 IslandLogo.Position = UDim2.fromOffset(8,6)
-IslandLogo.Size = UDim2.fromOffset(28,28)
+IslandLogo.Size = UDim2.fromOffset(26,26)
 IslandLogo.BackgroundTransparency = 1
 IslandLogo.Image = LOGO
 IslandLogo.ZIndex = 701
@@ -827,11 +831,11 @@ islandLogoCorner.Parent = IslandLogo
 
 local IslandText = Instance.new("TextLabel")
 IslandText.BackgroundTransparency = 1
-IslandText.Position = UDim2.fromOffset(42,0)
-IslandText.Size = UDim2.new(1,-48,1,0)
+IslandText.Position = UDim2.fromOffset(39,0)
+IslandText.Size = UDim2.new(1,-45,1,0)
 IslandText.Text = "Troll HUB"
 IslandText.Font = Enum.Font.GothamBold
-IslandText.TextSize = 13
+IslandText.TextSize = 12
 IslandText.TextColor3 = Color3.fromRGB(255,255,255)
 IslandText.TextXAlignment = Enum.TextXAlignment.Left
 IslandText.ZIndex = 701
@@ -3074,7 +3078,7 @@ local minimized = false
 
 local function ShowIsland()
     IslandFrame.Visible = true
-    IslandFrame.Size = UDim2.fromOffset(24,24)
+    IslandFrame.Size = UDim2.fromOffset(22,22)
 
     TweenService:Create(
         IslandFrame,
@@ -3084,7 +3088,7 @@ local function ShowIsland()
             Enum.EasingDirection.Out
         ),
         {
-            Size = UDim2.fromOffset(154,40)
+            Size = UDim2.fromOffset(142,38)
         }
     ):Play()
 end
@@ -3098,7 +3102,7 @@ local function HideIsland()
             Enum.EasingDirection.In
         ),
         {
-            Size = UDim2.fromOffset(24,24)
+            Size = UDim2.fromOffset(22,22)
         }
     ):Play()
 
